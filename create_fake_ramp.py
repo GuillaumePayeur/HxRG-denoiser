@@ -3,25 +3,18 @@ from astropy.io import fits
 import glob
 from scipy.ndimage.filters import median_filter
 import os
-from xtract_ribbon import *
 
 def sigma(im):
     return (np.nanpercentile(im,84.13448) - np.nanpercentile(im,15.86552))/2
 
-"""
-We take a folder containing a set of unilluminated dark frames and we add
-a science 'scence' that is considered noiseless. This scene is added as a 
-Poisson accumulation and is the basis for the ML traning.
-"""
+def create_ramp(ramp_folder,scene):
+    """
+    We take a folder containing a set of unilluminated dark frames and we add
+    a science 'scene' that is considered noiseless. This scene is added as a
+    Poisson accumulation and is the basis for the ML traning.
+    """
 
-# folder that contains a 'dark' ramp with a number of readouts
-ramp_folders = ['ramp_001']
-# ramps that will be inputted on a
-scenes = ['TEFF3500.fits']
-
-for iscene in range(len(ramp_folders)):
-    ramp_folder = ramp_folders[iscene]
-    scene = fits.getdata(scenes[iscene])
+    scene = fits.getdata(scene)
 
     # loop through ramp directories
     files = glob.glob(ramp_folder+'/*.fits')
