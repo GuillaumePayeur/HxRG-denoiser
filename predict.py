@@ -33,7 +33,7 @@ def generate_NN_predictions(ramp_folder,NN_name):
 
     # Predicting on every row of the array one by one.
     print('generating predictions of the neural network')
-    for i in tqdm(range(4091-100, 4091)):
+    for i in tqdm(range(5, 4091)):
         # Loading the data
         x = np.zeros((98,128,40,3))
         for j in range(3):
@@ -54,7 +54,7 @@ def generate_NN_predictions(ramp_folder,NN_name):
     print('combining the predictions into one image')
     image_ML = np.zeros((4096,4096))
     # Loading the predictions
-    for i in tqdm(range(4091-100, 4091)):
+    for i in tqdm(range(5, 4091)):
         y_pred = np.load(outfolder+'/predictions_{}.npy'.format(i))
         for j in range(0,128):
             for k in range(1,32,2):
