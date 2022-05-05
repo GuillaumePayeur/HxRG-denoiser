@@ -11,6 +11,4 @@ This repository contains code the code needed to train a denoising neural networ
 [Astropy](https://github.com/astropy/astropy "Astropy on GitHub")  
 [tqdm](https://github.com/tqdm/tqdm "tqdm on GitHub")
 ## Citing This Work
-```
-biblitex code tba
-```
+If you use our work please cite Payeur et al. 2022 (arXiv ID 2205.01866)
