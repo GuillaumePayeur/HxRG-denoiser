@@ -4,7 +4,7 @@ We present a new procedure rooted in deep learning to construct science images f
 ## Article
 Checkout our [paper](https://arxiv.org/pdf/2205.01866.pdf) for an in depth discussion of our methods and results
 ## Getting Started
-This repository contains code the code needed to train a denoising neural network as described in our [paper](https://arxiv.org/pdf/tba.pdf). We provide sample data collected by the instrument NIRPS to test the code with. It can be downloaded [here](https://www.astro.umontreal.ca/~artigau/ml/). This data may be replaced by your own, and the code may be modified to suit your needs. 
+This repository contains code the code needed to train a denoising neural network as described in our [paper](https://arxiv.org/pdf/2205.01866.pdf). We provide sample data collected by the instrument NIRPS to test the code with. It can be downloaded [here](https://www.astro.umontreal.ca/~artigau/ml/). This data may be replaced by your own, and the code may be modified to suit your needs. 
 ## Dependencies
 [Tensorflow](https://github.com/tensorflow/tensorflow "Tensorflow on GitHub")  
 [Keras](https://github.com/keras-team/keras "Keras on GitHub")  
